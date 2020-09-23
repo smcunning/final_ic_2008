@@ -1,3 +1,4 @@
+require 'date'
 class CookBook
   attr_reader :recipes
 
@@ -24,6 +25,6 @@ class CookBook
   end
 
   def date
-    "04-22-2020"
+    Date.today.strftime("%m-%d-%Y")
   end
 end
