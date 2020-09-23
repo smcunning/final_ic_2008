@@ -71,10 +71,11 @@ class CookBookTest < Minitest::Test
 
   def test_it_can_find_date_created
     cookbook = CookBook.new
-    assert_equal "04-22-2020", cookbook.date
+    assert_equal "09-23-2020", cookbook.date
   end
 
   def test_it_can_find_summary
+    cookbook = CookBook.new
     ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})
     ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 30})
     recipe1 = Recipe.new("Mac and Cheese")
