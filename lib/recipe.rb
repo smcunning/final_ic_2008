@@ -12,4 +12,10 @@ class Recipe
        @ingredients_required[ingredient_obj] = quantity
      end
   end
+
+  def ingredients
+    @ingredients_required.map do |ingredient, quantity|
+      ingredient
+    end
+  end
 end
