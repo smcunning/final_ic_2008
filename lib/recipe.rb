@@ -4,4 +4,12 @@ class Recipe
     @name = name
     @ingredients_required = {}
   end
+
+  def add_ingredient(ingredient_obj, quantity)
+    if @ingredients_required.include?(ingredient_obj)
+       @ingredients_required[ingredient_obj] += quantity
+    else
+       @ingredients_required[ingredient_obj] = quantity
+     end
+  end
 end
