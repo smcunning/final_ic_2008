@@ -1,2 +1,5 @@
 class Pantry
-end 
+  def initialize
+    @stock = {}
+  end
+end
