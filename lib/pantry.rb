@@ -9,6 +9,14 @@ class Pantry
       @stock[ingredient_obj]
     else
       0
+    end
+  end
+
+  def restock(ingredient_obj, quantity)
+    if stock_check(ingredient_obj) > 0
+      @stock[ingredient_obj] += quantity
+    else
+      @stock[ingredient_obj] = quantity
     end 
   end
 end
