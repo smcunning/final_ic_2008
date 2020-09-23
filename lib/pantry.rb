@@ -17,6 +17,12 @@ class Pantry
       @stock[ingredient_obj] += quantity
     else
       @stock[ingredient_obj] = quantity
-    end 
+    end
+  end
+
+  def enough_ingredients_for?(recipe_obj)
+    recipe_obj.ingredients_required.all? do |ingredient, quantity|
+      stock_check(ingredient) >= quantity
+    end
   end
 end
