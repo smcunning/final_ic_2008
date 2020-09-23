@@ -13,6 +13,6 @@ class CookBook
       recipe.ingredients_required.map do |ingredient|
         ingredient[0].name
       end
-    end.flatten
+    end.flatten.uniq
   end
 end
