@@ -10,6 +10,6 @@ class PantryTest < Minitest::Test
     ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
     pantry = Pantry.new
     assert_instance_of Pantry, pantry
-    assert_equal {}, pantry.stock
+    assert_equal ({}), pantry.stock
   end
 end
